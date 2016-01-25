@@ -1,0 +1,17 @@
+group 'bz.tsung'
+version '1.0'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.6
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.7.0'
+    compile 'com.xebia:jackson-lombok:1.0'
+    compile 'org.apache.commons:commons-lang3:3.4'
+}
