@@ -27,6 +27,7 @@ public class JsonApiDocument {
     private final Map<String, String> links;
     private final LinkedHashSet<Resource> includedRecs;
     private final List<Resource> included;
+    private JsonApi jsonapi;
 
     public JsonApiDocument() {
         links = new LinkedHashMap<String, String>();
@@ -45,6 +46,14 @@ public class JsonApiDocument {
             return null;
         }
         return data;
+    }
+
+    public void setJsonapi(JsonApi jsonapi) {
+        this.jsonapi = jsonapi;
+    }
+
+    public JsonApi getJsonapi() {
+        return jsonapi;
     }
 
     public void setMeta(Meta meta) {
@@ -84,6 +93,7 @@ public class JsonApiDocument {
             .append(meta)
             .append(includedRecs)
             .append(links)
+            .append(jsonapi)
             .append(included)
             .build();
     }
