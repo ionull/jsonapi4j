@@ -2,6 +2,7 @@ group 'bz.tsung'
 version '1.0'
 
 apply plugin: 'java'
+apply plugin: 'idea'
 
 sourceCompatibility = 1.6
 
@@ -12,6 +13,12 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     compile 'com.fasterxml.jackson.core:jackson-core:2.7.0'
-    compile 'com.xebia:jackson-lombok:1.0'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.7.0'
+    compile 'org.projectlombok:lombok:1.16.6'
     compile 'org.apache.commons:commons-lang3:3.4'
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '2.5'
+  distributionUrl = "https://services.gradle.org/distributions/gradle-$gradleVersion-all.zip"
 }

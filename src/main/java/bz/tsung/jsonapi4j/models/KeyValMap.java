@@ -16,10 +16,6 @@ import java.util.Map;
 public abstract class KeyValMap {
     private final Map<String, Object> map;
 
-    protected KeyValMap(Map<String, Object> m) {
-        map = m;
-    }
-
     /**
      * Get an object from map.
      *
