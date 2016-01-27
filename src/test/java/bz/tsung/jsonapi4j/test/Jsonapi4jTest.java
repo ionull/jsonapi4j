@@ -6,6 +6,7 @@ import bz.tsung.jsonapi4j.models.Resource;
 import org.junit.Test;
 
 import java.io.IOException;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -27,9 +28,9 @@ public class Jsonapi4jTest {
             Map<String, Object> attributes = resource.getAttributes();
             assert attributes.containsKey("message");
             assert attributes.get("message").equals("Validation failed");
+            assert attributes.get("errors") instanceof Collection;
         } catch (IOException e) {
             e.printStackTrace();
         }
-        assert 1 == 1;
     }
 }
