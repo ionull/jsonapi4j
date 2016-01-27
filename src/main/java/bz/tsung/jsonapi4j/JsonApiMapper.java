@@ -24,7 +24,6 @@ public class JsonApiMapper {
     /**
      * Instantiates a new JSON API OBJECT_MAPPER.
      *
-     * @param dictionary the dictionary
      */
     public JsonApiMapper() {
         mapper = new ObjectMapper();
